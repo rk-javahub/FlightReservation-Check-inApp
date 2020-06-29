@@ -1,2 +1,2 @@
-# FlightReservation-Check-inApp
+# FlightReservation App
 Application to reserve flight and perform check in process.
