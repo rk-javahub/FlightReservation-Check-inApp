@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+<proerty name="LOG_DIR" value="F:\JAVA\Eclipse workspaces\Spring Boot Projects\Documents And Reports"/>
+
+	<appender name="FILE" class="">
+	
+
+	</appender>
+
+</configuration>

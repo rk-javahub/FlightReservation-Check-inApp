@@ -1,0 +1,13 @@
+package com.rohit.flightreservation.services;
+
+import com.rohit.flightreservation.dto.ReservationRequest;
+import com.rohit.flightreservation.entities.Reservation;
+
+public class ReservationServiceImpl implements ReservationService {
+
+	@Override
+	public Reservation bookFlight(ReservationRequest request) {
+		
+		return null;
+	}
+}

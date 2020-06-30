@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<proerty name="LOG_DIR"
+		value="F:\JAVA\Eclipse workspaces\Spring Boot Projects\Documents And Reports\Log Info Flight Reservation" />
+	<property name="FILE_PREFIX" value="flightreservation" />
+
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+
+	</appender>
+
+</configuration>

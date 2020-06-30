@@ -1,0 +1,18 @@
+package com.rohit.flightreservation.util;
+
+import java.io.FileOutputStream;
+
+import org.springframework.stereotype.Component;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.rohit.flightreservation.entities.Reservation;
+
+@Component
+public class PDFGenerator {
+	public void generateItinerary(Reservation reservation, String filepath) {
+		Document document = new Document();
+		PdfWriter.getInstance(document, new FileOutputStream(filepath));
+	}
+
+}

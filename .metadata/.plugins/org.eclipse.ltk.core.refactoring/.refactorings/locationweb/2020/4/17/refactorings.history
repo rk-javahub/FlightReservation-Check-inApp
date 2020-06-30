@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;createMimeMessage&apos; from expression &apos;sender.createMimeMessage()&apos;&#x0D;&#x0A;- Original project: &apos;locationweb&apos;&#x0D;&#x0A;- Variable name: &apos;createMimeMessage&apos;&#x0D;&#x0A;- Destination method: &apos;com.rohit.location.util.EmailUtilImpl.sendEmail()&apos;&#x0D;&#x0A;- Variable expression: &apos;sender.createMimeMessage()&apos;" description="Extract local variable &apos;createMimeMessage&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.rohit.location.util{EmailUtilImpl.java" name="createMimeMessage" replace="false" selection="414 26" stamp="1587450894523" varType="false" version="1.0"/>
+</session>
