@@ -12,7 +12,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
 
-import com.rohit.flightreservation.services.ReservationServiceImpl;
+
 
 /**
  * Class for Email sending functionality.

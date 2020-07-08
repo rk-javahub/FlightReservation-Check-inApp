@@ -12,15 +12,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rohit.flightreservation.entities.User;
 import com.rohit.flightreservation.repositories.UserRepository;
+import com.rohit.flightreservation.services.SecurityService;
 
 @Controller
 public class UserController {
 
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
 
 	@Autowired
-	BCryptPasswordEncoder bCryptPasswordEncoder;
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+	@Autowired
+	private SecurityService securityService;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
@@ -42,8 +46,8 @@ public class UserController {
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password,
 			ModelMap modelMap) {
 		LOGGER.info("Inside login() and email is" + username);
-		User user = userRepository.findByEmail(username);
-		if (user.getPassword().equals(password)) {
+		boolean loginStatus = securityService.login(username, password);
+		if (loginStatus) {
 			return "findFlights";
 		} else {
 			modelMap.addAttribute("msg", "Invalid Username or Password. Please try again");
