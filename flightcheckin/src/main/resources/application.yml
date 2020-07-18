@@ -1,9 +1,9 @@
-# View Resolver
-spring.mvc.view.prefix=/WEB-INF/jsps/
-spring.mvc.view.suffix=.jsp
-
-# Context path setting
-server.servlet.context-path=/flightcheckin
-
-# Change Port Number
-server.port=9090
+server:
+  port: 9090
+  servlet:
+    context-path: /flightcheckin
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsps/
+      suffix: .jsp

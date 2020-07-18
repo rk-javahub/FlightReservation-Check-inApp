@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="flight-administration"/>
 <aop-project name="flightcheckin"/>
 <aop-project name="flightreservation"/>
 </aop-reference-model>
