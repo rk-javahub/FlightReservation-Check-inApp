@@ -1,1 +1,2 @@
 1. Use @InitBinder Annotation when adding flight Date with specifying Date format.
+2. Use JSTL <fmt:formatDate> to dislpay Date is any format in JSP.
