@@ -1,11 +1,14 @@
 package com.rohit.flightreservation.controller;
 
+import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,14 +39,18 @@ public class UserController {
 	}
 
 	@RequestMapping("/registerUser")
-	public String register(@ModelAttribute("user") User user) {
+	public String register(@Valid @ModelAttribute("user") User user, BindingResult bindingResult) {
 		LOGGER.info("Inside register()" + user);
+		if (bindingResult.hasErrors()) {
+			LOGGER.info("Entered in to bindingResult if statement...");
+			return "login/registerUser";
+		}
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		userRepository.save(user);
 		return "login/login";
 	}
 
-	@RequestMapping(path = "/login",method = RequestMethod.POST)
+	@RequestMapping(path = "/login", method = RequestMethod.POST)
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password,
 			ModelMap modelMap) {
 		LOGGER.info("Inside login() and email is" + username);
