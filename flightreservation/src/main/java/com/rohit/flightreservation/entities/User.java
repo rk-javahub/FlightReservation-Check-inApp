@@ -23,7 +23,7 @@ import lombok.ToString;
 public class User extends AbstractEntity {
 
 	@NotNull(message = "Username is mandatory...")
-	@Size(min=2, max=30)
+	@Size(min=2, message = "Required")
 	private String firstName;
 	@NotNull
 	private String lastName;
