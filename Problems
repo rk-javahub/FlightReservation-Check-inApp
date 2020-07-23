@@ -1,0 +1,1 @@
+1. http://localhost:8080/flightreservation/registerUser URL after refreshing doesnot clean already typed text on textbox. (Browser refresh problem.)
