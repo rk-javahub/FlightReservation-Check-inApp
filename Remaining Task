@@ -1,3 +1,4 @@
 1. Use @InitBinder Annotation when adding flight Date with specifying Date format.
 2. Use JSTL <fmt:formatDate> to dislpay Date is any format in JSP. 
 3. Use DatePicker. (Refer 24 Step 20 - Let's add a Target Date for Todo - Use initBinder to Handle Date Fields in Spring Boot Udemy in28Minuites Video)
+4. Use NavigationBar (Video 25)
