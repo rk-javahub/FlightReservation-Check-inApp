@@ -11,8 +11,16 @@
 	<form action="findFlights" method="post">
 		From:<input type="text" name="from" /> 
 		To:<input type="text" name="to" /> 
-		Departure Date:<input type="text" name="departureDate" />
-		<input type="submit" value="search" />
+		Departure Date:<input type="text" name="departureDate" id="departureDate"/>
+		<input type="submit" value="Search" />
 	</form>
+	<script
+		src="webjars/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
+
+	<script type="text/javascript">
+		$('#departureDate').datepicker({
+			format : 'dd/mm/yyyy'
+		});
+	</script>
 </body>
 </html>
