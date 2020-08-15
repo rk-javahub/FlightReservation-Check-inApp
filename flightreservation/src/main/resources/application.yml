@@ -2,6 +2,12 @@ PDFLocation: F:\JAVA\Eclipse workspaces\Spring Boot Projects\Documents And Repor
 server:
   servlet:
     context-path: /flightreservation
+    
+logging:
+  level:
+    net.sf.ehcache: debug
+    
+    
 spring:
   datasource:
     password: root
@@ -15,10 +21,23 @@ spring:
     
     
     
-    properties:
+
+    properties:                
+               javax:
+                     persistence:
+                                 sharedCache:
+                                             mode: ENABLE_SELECTIVE
+                     
                hibernate:
                          generate_statistics: true
                          format_sql: true
+                         cache:
+                               use_second_level_cache: true
+                               region:
+                                      factory_class: org.hibernate.cache.ehcache.internal.EhcacheRegionFactory
+                                      
+ 
+                               
  
   mail:
     host: "smtp.gmail.com\t"
