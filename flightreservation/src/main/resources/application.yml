@@ -7,10 +7,19 @@ spring:
     password: root
     url: jdbc:mysql://localhost:3306/reservation
     username: root
+    
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    
+    
+    
+    properties:
+               hibernate:
+                         generate_statistics: true
+                         format_sql: true
+ 
   mail:
     host: "smtp.gmail.com\t"
     password: indevour
@@ -23,6 +32,8 @@ spring:
             enable: true
             required: true
     username: kumbharrohit7590
+    
+    
   mvc:
     view:
       prefix: /WEB-INF/jsps/
